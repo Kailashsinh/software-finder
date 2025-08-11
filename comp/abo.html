@@ -1,0 +1,523 @@
+<html>
+<head>
+	 <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/Software.css">
+
+    <title>text-editors Downloader</title>
+</head>
+<style>
+    /* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(3, 1, 26);
+} */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* background: url("https://i.pinimg.com/736x/62/7c/05/627c059344604fe8bde3184a991672ff.jpg") center center; */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+/* header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+} */
+header {
+    background-color: transparent;
+    color: #fff;
+   
+}
+
+header h1 {
+    margin: 0;
+    flex: 1;
+    margin-right: 500px;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    /* Add relative positioning */
+    display: block;
+    /* Make links block elements */
+    padding: 10px 15px;
+    /* Adjust padding */
+}
+
+nav ul li a:hover::before {
+    content: '';
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    
+    z-index: -10;
+   
+   
+}
+
+
+/* .overlaying {
+    width: 100%;
+    height: 100%;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* color: white; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* background-color: rgb(0, 0, 0, 0.3); */
+/* } */ 
+
+
+main {
+    padding: 20px;
+}
+
+#downloads {
+    /* margin: 100px; */
+    margin-top: 50px;
+    /* padding: 500px; */
+    /* display: flex; */
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.download_windows {
+    /* background: url(https://source.unsplash.com/random/1000x1000) center center; */
+    background: url("https://sixnfive.com/wp-content/uploads/2021/07/hero_light_02-640x427.jpg") center center;
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    display: block;
+    /* border: 1px solid #ccc; */
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 10px 10px 20px black;
+    background-color: #fff;
+    color: rgb(225, 224, 224);
+    transition: transform 0.3s ease;
+}
+h3
+{
+  width: 400px;
+}
+
+.download_ubuntu {
+    /* background: url(https://source.unsplash.com/random/1000x1000) center center; */
+    background: url("https://149366088.v2.pressablecdn.com/wp-content/uploads/2022/03/jammy-jellyfish-wallpaper.jpg") center center;
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 20px;
+    /* border: 1px solid #ccc; */
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 10px 10px 20px black;
+    transition: transform 0.3s ease;
+}
+.download_mac {
+    /* background: url(https://source.unsplash.com/random/1000x1000) center center; */
+    background: url("https://e1.pxfuel.com/desktop-wallpaper/507/823/desktop-wallpaper-1920x1080-apple-mac-background-black-brand-backgrounds-apple.jpg") center center;
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 20px;
+    /* border: 1px solid #ccc; */
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 10px 10px 20px black;
+    color: rgb(225, 224, 224);
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.download_mac:hover {
+    transform: translatex(20px);
+    filter: drop-shadow(10px 10px 20px #021d94);
+}
+.download_ubuntu:hover {
+    transform: translatex(20px);
+    filter: drop-shadow(10px 10px 20px #021d94);
+}
+.download_windows:hover {
+    transform: translatex(20px);
+    filter: drop-shadow(10px 10px 20px #021d94);
+}
+
+.download_windows h2 {
+    margin-top: 0;
+}
+.download_ubuntu h2 {
+    margin-top: 0;
+}
+.download_mac h2 {
+    margin-top: 0;
+}
+
+button {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    box-shadow: 10px 10px 20px black;
+}
+
+button:hover {
+    background-color: #0056b3;
+    filter: 10px 10px 20px #0056b3;
+}
+
+/* .windows { background-color: #007bff; }
+.ubuntu { background-color: #dd4814; }
+.mac { background-color: #000; } */
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+a{
+ text-decoration: none;   
+}
+.social-icon{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item{
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+
+
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+    }
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(100%, 400px);
+  border-bottom: 1px solid var(--dark);
+}
+
+input {
+  padding: 0.75rem 0;
+  border: none;
+  background: none;
+  font-weight: 500;
+  transition: border 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  border-radius: 0;
+  width: 100%;
+  font-size: 1.05rem;
+  font-weight: bolder;
+}
+
+@keyframes blink
+{
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.bl{
+    animation: blink 1s infinite;
+}
+
+
+</style>
+<body style="background-repeat: no-repeat;background-size: cover;">
+     <header>
+        
+        <nav>
+            <img src="../images/JSRFLOGO.png" width="100px" height="100px" >
+        
+          
+              <ul >
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <li><a href="../index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                  <li><a href="text.html"><i class="fa-brands fa-app-store-ios"></i>Applications</a></li>
+                  <li><a href="abo.html"><i class="fa-solid fa-address-card"></i> About </a></li>
+                  <li><a href="serv.html"><i class="fa-solid fa-bell-concierge"></i> Services</a></li>
+                  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<li><a href="profi.html"><i class="fa-solid fa-user fa-2xl" style="color:black; margin-top: 20px;"></i></a></li>
+              </ul>
+          </nav>
+    </header>
+		
+<div class="overlaying">
+    <center>
+    <h1 style="font-family: sans-serif;color: black;"> ABOUT US </h1>
+</center>
+    </div>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Software Version Downloader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 10 10 20px black;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .team-member {
+            margin-top: 30px;
+        }
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto;
+            display: block;
+            border: 5px solid #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .team-member h2 {
+            text-align: center;
+            margin-top: 15px;
+            color: #333;
+        }
+        .team-member p {
+            text-align: center;
+            color: #666;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: black;">About Us</h1>
+        <div class="team-member">
+            <img src="../images/Kilash.jpg" alt="Team Member 3">
+            <h2>KAILASH</h2>
+            <p>FOR CONTACT:-kailashsinhrajput25@gmail.com</p>
+        </div>
+
+        
+        <div class="team-member">
+            <img src="../images/Meet.jpg" alt="Team Member 4">
+            <h2>MEET MODI</h2>
+            <p>FOR CONTACT:-meetmodi752006@gmai.com</p>
+        </div>
+        <div class="team-member">
+            <img src="../images/Jay.jpg" alt="Team Member 5">
+            <h2>JAY GABANI</h2>
+            <p> FOR CONTACT:-jaygabani116@gmai.com</p>
+        </div>
+      
+        <div class="team-member">
+            <img src="../images/Dhruvil.jpg" alt="Team Member 1">
+            <h2>DHRUVIL VYAS</h2>
+            <p>FOR CONTACT:-dhruvilvyas03@gmail.com</p>
+        </div>
+        <div class="team-member">
+            <img src="../images/Prince.jpg" alt="Team Member 2">
+            <h2>PRINCE KAKADIYA</h2>
+            <p>FOR CONTACT:-princekakadiya20@gmail.com</p>
+        </div>
+    </div>
+</body>
+</html>
+    <br>
+<br>
+<br>
+<br><br><br><br><br><br><br>
+
+
+
+    <footer class="footer">
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <center>CONTACT US</center>
+        <ul type="none" class="social-icon">
+          <li class="social-icon_item"><a class="social-icon_link" href="https://www.facebook.com/profile.php?id=61556265988655&mibextid=2JQ9oc">
+              <ion-icon name="logo-facebook"></ion-icon>FACEBOOK
+            </a></li>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<li class="social-icon_item"><a class="social-icon_link" href="https://x.com/jsr_softwares?t=u_vk3qWyglWKNNDmHSFtnw&s=08">
+              <ion-icon name="logo-twitter"></ion-icon>TWITTER
+            </a></li>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<li class="social-icon_item"><a class="social-icon_link" href="https://wa.me/+919712360092">
+            <i class="fab fa-whatsapp-square"></i>WHATSAPP
+            </a></li>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<li class="social-icon_item"><a class="social-icon_link" href="https://www.instagram.com/jsr.softwares?igsh=a2hhdDJuc3Nzcjg2">
+              <ion-icon name="logo-instagram"></ion-icon>INSTAGRAM
+            </a></li>
+        </ul>
+    <h3 style="font-family: cursive;">Enter your email here and we will notify you when new updates are made.</h3>
+    <br>
+      <form action="">
+                    <input type="text" placeholder="Email Address">
+                    <button >
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" />
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+            </div>
+    
+        <p>&copy;2024 presented by TEAM JSR | All Rights Reserved</p>
+      </footer>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="../js/Software.js"></script>
+</body>
+</html>
