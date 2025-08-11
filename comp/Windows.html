@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Downloads</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    background: url("https://sixnfive.com/wp-content/uploads/2021/07/hero_light_02-640x427.jpg") center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header {
+    background-color: transparent;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    /* Add relative positioning */
+    display: block;
+    /* Make links block elements */
+    padding: 10px 15px;
+    /* Adjust padding */
+}
+
+nav ul li a:hover::before {
+    /* Add hover effect */
+    content: '';
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent white */
+    z-index: -10;
+    /* Place behind the link text */
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+
+}
+
+.product {
+    background-color: transparent;
+    /* background: white; */
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px black;
+    padding: 20px;
+    width: 30%;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.product h2 {
+    margin-top: 10px;
+}
+
+.product p {
+    color: #666;
+}
+
+.download-btn {
+    display: block;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #0056b3;
+}
+
+img{
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+}
+
+</style>
+<body>
+    <header>
+        <h1 class="bl">Windows Downloads</h1>
+       <nav>
+            <ul>
+               &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; <li><a href="../So2.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="product-list">
+        <!-- Windows 11 -->
+        <div class="product">
+            <img src="https://sixnfive.com/wp-content/uploads/2021/07/hero_dark_02-640x427.jpg" alt="Windows 11">
+            <h2>Windows 11</h2>
+            <p>Experience the latest version of Windows</p>
+            <a href="https://go.microsoft.com/fwlink/?linkid=2171764" class="download-btn" data-version="11">Download</a>
+        </div>
+        <!-- Windows 10 -->
+        <div class="product">
+            <img src="https://freight.cargo.site/w/3840/q/75/i/a9f227752a9ba3bc689092085a7e6eb87b787abd858c3e3f0aebdc6a40f138d0/Windows_Final_3840p_v10_opt.png" alt="Windows 10">
+            <h2>Windows 10</h2>
+            <p>Get the latest version of Windows 10</p>
+            <a href="https://go.microsoft.com/fwlink/?LinkId=691209" class="download-btn" data-version="10">Download</a>
+        </div>
+        <!-- Windows 8.1 -->
+        <div class="product">
+            <img src="https://wallpaperbat.com/img/384519-windows-8-wallpaper-top-free-windows-8-background.jpg" alt="Windows 8.1">
+            <h2>Windows 8.1</h2>
+            <p>Download Windows 8.1 for free</p>
+            <a href="https://software.download.prss.microsoft.com/dbazure/Win8.1_English_x64.iso?t=4589bfc7-1775-4ebf-866f-b5c3cb54fd20&e=1706964053&h=ecd45c917ea3d9b116226d646ab12138cb6d2ea7764a012941d3f7ce7e3311e1" class="download-btn" data-version="8.1">Download</a>
+        </div><br>
+        <!-- Windows 7 -->
+        <div class="product">
+            <img src="data:image/jpeg;base64,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" alt="Windows 7">
+            <h2>Windows 7</h2>
+            <p>Upgrade to Windows 7 now</p>
+            <a href="" class="download-btn" data-version="7">Download</a>
+        </div>
+    </main>
+    <script src="../js/script.js">
+        document.addEventListener("DOMContentLoaded", function() {
+    const downloadButtons = document.querySelectorAll(".download-btn");
+    downloadButtons.forEach(function(button) {
+        button.addEventListener("click", function(event) {
+            event.preventDefault();
+            const version = this.dataset.version;
+            // Replace "#" with the actual download link for each version
+            window.location.href = "https://example.com/windows${version}-download-link";
+        });
+    });
+});
+    </script>
+</body>
+</html>
